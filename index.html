@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='css/styles.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock, Paper, Scissors, SHOOT!</title>
+    <link rel="icon" href="images/icon.png">
+    <script src="https://kit.fontawesome.com/52183dfe65.js" crossorigin="anonymous"></script>
+	<script src="js/rock-paper-scissors-start.js" type="application/javascript"></script>
+</head>
+<body>
+	<h2>Rock, Paper, Scissors</h2>
+    <table>
+        <tr>
+            <th colspan="2">SCORE</th>
+        </tr>
+        <tr>
+            <td class='score'><p id='you'>0</p></td>
+            <td class='score'><p id='opp'>0</p></td>
+        </tr>
+        <tr>
+            <td>YOU</td>
+            <td>OPPONENT</td>
+        </tr>
+    </table>
+	<h6>Make your choice:</h6>
+	<div class='choice'>
+		<ul id='yourChoice'>
+			<li id='rock' onclick="round('rock')"><i class="fa-solid fa-hand-fist"></i></li>
+			<li id='paper' onclick="round('paper')"><i class="fa-solid fa-hand"></i></li>
+			<li id='scissors' onclick="round('scissors')"><i class="fa-solid fa-hand-peace"></i></li>
+			<li id='random' onclick="round('rand')">I'm feeling lucky</li>
+		</ul>
+    </div>
+    <div id= 'action'>
+        <div id='arena'>
+            <div id= 'yourMove'>
+            </div>
+            <div id= 'oppsMove'>
+            </div>
+        </div>
+    </div>
+	<footer>
+        <p class='footertxt'>Created by Tyler Pires, 2022</p>
+		<select name="bg">
+			<option value="bg1" onclick="bgChange(0)" style="background:#593322;"></option>
+			<option value="bg2" onclick="bgChange(1)" style="background:#363644;"></option>
+		</select>
+	</footer>
+
+    <audio id="crush" src="audio/smw.wav"></audio>
+    <audio id="sc1" src="audio/scissoropen.mp3"></audio>
+    <audio id="sc2" src="audio/scissorclose.mp3"></audio>
+    <audio id="crumble" src="audio/crumble.mp3"></audio>
+</body>
+</html>
